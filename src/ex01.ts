@@ -2,7 +2,7 @@
 // - `firstName` (string)
 // - `lastName` (string)
 // - `age` (number)
-// Then, create a function `greetPerson` that accepts a `Person` object and returns a greeting string: 
+// Then, create a function `greetPerson` that accepts a `Person` object and returns a greeting string:
 // "Hello, [firstName] [lastName]! You are [age] years old."
 
 type Person = {
@@ -11,9 +11,9 @@ type Person = {
   age: number;
 };
 
-function greetPerson(person) {
-  
+function greetPerson(person: Person): string {
+  return `Hello, ${person.firstName} ${person.lastName}! You are ${person.age} years old.`;
 }
 
-console.log(greetPerson({ firstName: 'John', lastName: 'Doe', age: 30 }));
+console.log(greetPerson({ firstName: "John", lastName: "Doe", age: 30 }));
 // Expected output: "Hello, John Doe! You are 30 years old."

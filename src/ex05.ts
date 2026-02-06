@@ -1,9 +1,12 @@
 // Exercise: Create a function `setTheme` that accepts a parameter with the literal type 'dark' or 'light'.
 // The function should return a string saying "Theme set to [theme]".
 
-function setTheme(theme) {
-  
+function setTheme(theme: "dark" | "light"): string {
+  if (theme === "dark" || theme === "light") {
+    return `Theme set to ${theme}`;
+  }
+  return "Invalid theme";
 }
 
-console.log(setTheme('dark'));
+console.log(setTheme("dark"));
 // Expected output: "Theme set to dark"
